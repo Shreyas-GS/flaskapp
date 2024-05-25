@@ -20,8 +20,8 @@ if not os.path.exists(upload_dir):
     os.makedirs(upload_dir)
 
 # Imagga API credentials
-imagga_api_key = 'YOUR_IMAGGA_API_KEY'
-imagga_api_secret = 'YOUR_IMAGGA_API_SECRET'
+imagga_api_key = 'acc_7cc6ab937af8e86'
+imagga_api_secret = 'f2cb99611314dc9ea8895ffa6f8b3b1f'
 
 # Cloudinary configuration
 cloudinary.config(
