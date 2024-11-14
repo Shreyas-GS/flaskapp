@@ -33,11 +33,11 @@ cloudinary.config(
 
 # MySQL database connection
 db = mysql.connector.connect(
-    host="mysql-ybzb.railway.internal",
+    host="autorack.proxy.rlwy.net",
     user="root",
     password="kgbQryjqbVQFojvZRoMrAPMAHvHCAQer",
     database="railway",
-    port=3306
+    port=49449
 )
 
 @app.route('/uploads/<filename>')
