@@ -37,7 +37,7 @@ db = mysql.connector.connect(
     user="root",
     password="kgbQryjqbVQFojvZRoMrAPMAHvHCAQer",
     database="railway",
-    port=49449
+    port=3306
 )
 
 @app.route('/uploads/<filename>')
