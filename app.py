@@ -25,7 +25,7 @@ imagga_api_secret = 'f2cb99611314dc9ea8895ffa6f8b3b1f'
 
 # Cloudinary configuration
 cloudinary.config(
-    cloud_name='dsu0qscmi',
+    cloud_name='dfrvczyot',
     api_key='557425515371482',
     api_secret='AFjkCPkOjNxEFCaZyqhl3jZL7u0',
     secure=True
