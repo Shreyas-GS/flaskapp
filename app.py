@@ -20,8 +20,8 @@ if not os.path.exists(upload_dir):
     os.makedirs(upload_dir)
 
 # Imagga API credentials
-imagga_api_key = 'acc_7cc6ab937af8e86'
-imagga_api_secret = 'f2cb99611314dc9ea8895ffa6f8b3b1f'
+imagga_api_key = 'acc_126b39ea99bca93'
+imagga_api_secret = '313354d49e6f2f2aa9470c445d0f925f'
 
 # Cloudinary configuration
 cloudinary.config(
@@ -107,15 +107,15 @@ def add_items():
             item_name = item_data.get("itemName")
             quantity = item_data.get("quantity")
 
-            cursor.execute("SELECT * FROM Inventory WHERE Item = %s", (item_name,))
+            cursor.execute("SELECT * FROM Inventory WHERE Items = %s", (item_name,))
             item = cursor.fetchone()
             if item:
                 # Item exists, update the quantity
                 new_quantity = int(item[1]) + int(quantity)
-                cursor.execute("UPDATE Inventory SET Quantity = %s WHERE Item = %s", (new_quantity, item_name))
+                cursor.execute("UPDATE Inventory SET Quantity = %s WHERE Items = %s", (new_quantity, item_name))
             else:
                 # Item does not exist, insert a new row
-                cursor.execute("INSERT INTO Inventory (Item, Quantity) VALUES (%s, %s)", (item_name, quantity))
+                cursor.execute("INSERT INTO Inventory (Items, Quantity) VALUES (%s, %s)", (item_name, quantity))
 
             db.commit()
         return jsonify({"message": "Items added/updated successfully"}), 200
